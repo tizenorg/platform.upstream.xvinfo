@@ -1,4 +1,4 @@
-/* $XFree86$ */
+/* $XFree86: xc/programs/xvinfo/xvinfo.c,v 1.8 2002/01/22 23:05:43 mvojkovi Exp $ */
 
 #include <X11/X.h>
 #include <X11/Xlib.h>
