@@ -21,8 +21,8 @@
 
 bin_PROGRAMS = xvinfo
 
-xvinfo_CFLAGS = $(DEP_CFLAGS)
-xvinfo_LDADD = $(DEP_LIBS)
+xvinfo_CFLAGS = $(XVINFO_CFLAGS)
+xvinfo_LDADD = $(XVINFO_LIBS)
 
 xvinfo_SOURCES =	\
         xvinfo.c
