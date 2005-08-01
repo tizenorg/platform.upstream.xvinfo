@@ -27,6 +27,6 @@ xvinfo_LDADD = $(XVINFO_LIBS)
 xvinfo_SOURCES =	\
         xvinfo.c
 
-dist_man_MANS = \
+dist_man1_MANS = \
         xvinfo.man
 
