@@ -24,6 +24,7 @@ This argument allows you to specify the server to query; see \fIX(__miscmansuffi
 This variable may be used to specify the server to query.
 
 .SH SEE ALSO
-xdpyinfo(1)
+X(__miscmansuffix__), xdpyinfo(__appmansuffix__), xwininfo(__appmansuffix__),
+xdriinfo(__appmansuffix__), glxinfo(__appmansuffix__), xprop(__appmansuffix__)
 .SH AUTHORS
 Mark Vojkovich
