@@ -21,7 +21,7 @@
 
 bin_PROGRAMS = xvinfo
 
-xvinfo_CFLAGS = $(XVINFO_CFLAGS)
+AM_CFLAGS = $(XVINFO_CFLAGS)
 xvinfo_LDADD = $(XVINFO_LIBS)
 
 xvinfo_SOURCES =	\
