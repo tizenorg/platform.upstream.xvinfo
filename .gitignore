@@ -19,3 +19,6 @@ missing
 stamp-h1
 xvinfo
 xvinfo.1
+xvinfo-*.tar.*
+ChangeLog
+tags
