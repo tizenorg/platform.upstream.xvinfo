@@ -21,7 +21,7 @@
 
 bin_PROGRAMS = xvinfo
 
-AM_CFLAGS = $(XVINFO_CFLAGS)
+AM_CFLAGS = $(CWARNFLAGS) $(XVINFO_CFLAGS)
 xvinfo_LDADD = $(XVINFO_LIBS)
 
 xvinfo_SOURCES =	\
@@ -68,4 +68,4 @@ MAN_SUBSTS = \
 SUFFIXES = .$(APP_MAN_SUFFIX) .man
 
 .man.$(APP_MAN_SUFFIX):
-	sed $(MAN_SUBSTS) < $< > $@
+	$(AM_V_GEN)$(SED) $(MAN_SUBSTS) < $< > $@
