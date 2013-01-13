@@ -118,12 +118,13 @@ main(int argc, char *argv[])
                             attributes[k].name,
                             attributes[k].min_value, attributes[k].max_value);
 
-                    if (attributes[k].flags & XvSettable)
+                    if (attributes[k].flags & XvSettable) {
                         if (!shortmode)
                             fprintf(stdout,
                                     "              client settable attribute\n");
                         else
                             fprintf(stdout, "              settable");
+                    }
 
                     if (attributes[k].flags & XvGettable) {
                         Atom the_atom;
