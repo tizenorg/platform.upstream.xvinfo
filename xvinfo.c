@@ -1,3 +1,7 @@
+#ifdef HAVE_CONFIG_H
+# include "config.h"
+#endif
+
 #include <X11/X.h>
 #include <X11/Xlib.h>
 #include <X11/extensions/Xvlib.h>
@@ -9,7 +13,7 @@
 static void _X_NORETURN
 PrintUsage(void)
 {
-    fprintf(stderr, "Usage:  xvinfo [-display host:dpy] [-short]\n");
+    fprintf(stderr, "Usage:  xvinfo [-display host:dpy] [-short] [-version]\n");
     exit(0);
 }
 
@@ -40,6 +44,10 @@ main(int argc, char *argv[])
             }
             else if (!strcmp(argv[i], "-short"))
                 shortmode = 1;
+            else if (!strcmp(argv[i], "-version")) {
+                printf("%s\n", PACKAGE_STRING);
+                exit(0);
+            }
             else {
                 PrintUsage();
             }

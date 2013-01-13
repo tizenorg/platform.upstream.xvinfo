@@ -17,6 +17,9 @@ This argument allows you to specify the server to query; see \fIX(__miscmansuffi
 .TP 8
 .B "-short"
 Output less details, to reduce the amount of text.
+.TP 8
+.B "-version"
+Output program version, then exit.
 .SH ENVIRONMENT
 .PP
 .TP 8
