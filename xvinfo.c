@@ -6,7 +6,7 @@
 #include <string.h>
 #include <ctype.h>
 
-static void
+static void _X_NORETURN
 PrintUsage(void)
 {
    fprintf(stderr, "Usage:  xvinfo [-display host:dpy] [-short]\n");
