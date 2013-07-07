@@ -10,10 +10,12 @@
 #include <string.h>
 #include <ctype.h>
 
+static char *progname;
+
 static void _X_NORETURN
 PrintUsage(void)
 {
-    fprintf(stderr, "Usage:  xvinfo [-display host:dpy] [-short] [-version]\n");
+    fprintf(stderr, "Usage: %s [-display host:dpy] [-short] [-version]\n", progname);
     exit(0);
 }
 
@@ -32,6 +34,8 @@ main(int argc, char *argv[])
     XvImageFormatValues *formats;
     char *disname = NULL;
     char shortmode = 0;
+
+    progname = argv[0];
 
     if ((argc > 4))
         PrintUsage();
