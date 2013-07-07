@@ -59,13 +59,13 @@ main(int argc, char *argv[])
     }
 
     if (!(dpy = XOpenDisplay(disname))) {
-        fprintf(stderr, "xvinfo:  Unable to open display %s\n",
+        fprintf(stderr, "%s:  Unable to open display %s\n", progname,
                 (disname != NULL) ? disname : XDisplayName(NULL));
         exit(-1);
     }
 
     if ((Success != XvQueryExtension(dpy, &ver, &rev, &reqB, &eventB, &errorB))) {
-        fprintf(stderr, "xvinfo: No X-Video Extension on %s\n",
+        fprintf(stderr, "%s: No X-Video Extension on %s\n", progname,
                 (disname != NULL) ? disname : XDisplayName(NULL));
         exit(0);
     }
