@@ -1,3 +1,5 @@
+%bcond_with x
+
 Summary: Print out X-Video extension adaptor information
 Name: xvinfo
 Version: 1.1.2
@@ -13,6 +15,10 @@ BuildRequires: pkgconfig(xpm) pkgconfig(xt) pkgconfig(xtst) pkgconfig(xv)
 BuildRequires: pkgconfig(xxf86dga) pkgconfig(xxf86vm)
 BuildRequires: pkgconfig(xcb) pkgconfig(xcb-atom)
 
+%if !%{with x}
+ExclusiveArch:
+%endif
+
 %description
 Prints  out the capabilities of any video adaptors associated with the
 display that are accessible through the X-Video extension.
@@ -21,8 +27,8 @@ display that are accessible through the X-Video extension.
 %setup -q
 
 %build
-%configure
-make
+%autogen --disable-static
+make %{?_smp_mflags}
 
 %install
 rm -rf $RPM_BUILD_ROOT
